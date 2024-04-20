@@ -1,5 +1,5 @@
 class Solution:
-    def __init__(self, nums: list[int], target: int) -> List[int]:
+    def __init__(self, nums: list[int], target: int):
         self.nums = nums
         self.target = target
 
