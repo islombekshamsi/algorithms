@@ -4,19 +4,19 @@ class DivideTwoIntegers:
         self.divisor = divisor
     def DivideTwoIntegers(self):
         if self.divisor < 0 and self.dividend < 0:
-            self.divisor -= (self.divisor + self.divisor)
-            self.dividend -= (self.dividend + self.dividend)
+            self.divisor = abs(self.divisor)
+            self.dividend = abs(self.dividend)
             output = self.dividend // self.divisor
             if output > (2 ** 31 - 1):
                 output = 2 ** 31 - 1
         elif self.divisor < 0:
-            self.dividend -= (self.dividend + self.dividend)
+            self.dividend = abs(self.dividend)
             output = self.dividend // self.divisor
             output -= (output + output)
             if output < (-2 ** 31):
                 output = (-2 ** 31)
         elif self.dividend < 0:
-            self.divisor -= (self.divisor + self.divisor)
+            self.divisor = abs(self.divisor)
             output = self.dividend // self.divisor
             output -= (output + output)
             if output < (-2 ** 31):
